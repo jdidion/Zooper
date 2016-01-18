@@ -1,0 +1,6 @@
+<!ENTITY zotero.zooper.resolveDOIs.label "Fetch DOI metadata for items">
+<!ENTITY zotero.zooper.resolveAllDOIs.label "Fetch DOI metadata for all items">
+<!ENTITY zotero.zooper.resolveURLs.label "Fetch URL metadata for items">
+<!ENTITY zotero.zooper.resolveAllURLs.label "Fetch URL metadata for all items">
+<!ENTITY zotero.zooper.unloadPDFs.label "Unload PDFs for items">
+<!ENTITY zotero.zooper.unloadAllPDFs.label "Unload PDFs for all items">

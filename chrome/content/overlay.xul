@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://zooper/locale/overlay.dtd">
+
+<overlay
+    id="zooper"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script
+        type="application/x-javascript"
+        src="chrome://zooper/content/zooper.js"/>
+
+    <stringbundleset id="stringbundleset">
+        <stringbundle
+            id="zooper-bundle"
+            src="chrome://zooper/locale/zooper.properties"/>
+    </stringbundleset>
+
+    <menupopup id="zotero-tb-actions-popup">
+        <menuitem
+            id="zooper-tb-actions-resolve-doi"
+            label="&zotero.zooper.resolveAllDOIs.label;"
+            insertbefore="zotero-tb-actions-utilities-separator"
+            oncommand="Zotero.Zooper.handleAll(Zotero.Zooper.OP_DOI);"/>
+        <menuitem
+            id="zooper-tb-actions-resolve-url"
+            label="&zotero.zooper.resolveAllURLs.label;"
+            insertafter="zooper-tb-actions-resolve-doi"
+            oncommand="Zotero.Zooper.handleAll(Zotero.Zooper.OP_URL);"/>
+        <menuitem
+            id="zooper-tb-actions-unload-pdf"
+            label="&zotero.zooper.unloadAllPDFs.label;"
+            insertafter="zooper-tb-actions-resolve-url"
+            oncommand="Zotero.Zooper.handleAll(Zotero.Zooper.OP_UNLOAD);"/>
+    </menupopup>
+
+    <popup id="zotero-collectionmenu">
+        <menuitem
+            id="zotero-collectionmenu-zooper-doi"
+            label="&zotero.zooper.resolveDOIs.label;"
+            oncommand="Zotero.Zooper.handleSelectedEntities(Zotero.Zooper.OP_DOI);"/>
+        <menuitem
+            id="zotero-collectionmenu-zooper-url"
+            label="&zotero.zooper.resolveURLs.label;"
+            oncommand="Zotero.Zooper.handleSelectedEntities(Zotero.Zooper.OP_URL);"/>
+        <menuitem
+            id="zotero-collectionmenu-zooper-unload"
+            label="&zotero.zooper.unloadPDFs.label;"
+            oncommand="Zotero.Zooper.handleSelectedEntities(Zotero.Zooper.OP_UNLOAD);"/>
+    </popup>
+
+    <popup
+        id="zotero-itemmenu"
+        onpopupshowing="ZoteroPane.buildItemContextMenu();">
+        <menuitem
+            id="zotero-itemmenu-zooper-doi"
+            label="&zotero.zooper.resolveDOIs.label;"
+            oncommand="Zotero.Zooper.handleSelectedItems(Zotero.Zooper.OP_DOI);"/>
+        <menuitem
+            id="zotero-itemmenu-zooper-url"
+            label="&zotero.zooper.resolveURLs.label;"
+            oncommand="Zotero.Zooper.handleSelectedItems(Zotero.Zooper.OP_URL);"/>
+        <menuitem
+            id="zotero-itemmenu-zooper-unload"
+            label="&zotero.zooper.unloadPDFs.label;"
+            oncommand="Zotero.Zooper.handleSelectedItems(Zotero.Zooper.OP_UNLOAD);"/>
+    </popup>
+</overlay>

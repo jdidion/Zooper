@@ -1,0 +1,5 @@
+content zooper chrome/content/
+
+overlay chrome://zotero/content/zoteroPane.xul chrome://zooper/content/overlay.xul
+
+locale  zooper en-US chrome/locale/en-US/
