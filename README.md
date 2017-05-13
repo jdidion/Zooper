@@ -1,5 +1,7 @@
 # Zooper
 
+WARNING: This plugin is incomplete, and the functionality that does work may not operate with more recent versions of Zotero. If you are interested in contributing, please see the open issues.
+
 Zooper is a Zotero plugin that with a few functions for resolving missing metadata and managing attachments:
 
 1. Update metadata from DOI: If an article has a DOI, metadata is fetched from CrossRef. Currently, this works by creating a new item, merging it with the existing item, and then erasing it.
